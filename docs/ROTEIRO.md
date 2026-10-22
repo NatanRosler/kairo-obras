@@ -43,11 +43,19 @@ npm run lint         # padrões de código
 npm run gerar:seed   # depois de mudar src/data/exemplo.ts, regenera o SQL dos dados de exemplo
 ```
 
+## Banco de dados
+
+Projeto **Kairo Obras** no Supabase (organização Kairo), com as duas migrações de
+`supabase/migrations/` já aplicadas. Até o login existir, **não crie o `.env.local`**: sem login
+o banco não devolve nenhuma obra (é o RLS funcionando) e as telas ficariam vazias. Continue no
+modo demonstração.
+
+Ao mudar o esquema, crie um arquivo novo em `supabase/migrations/` (nunca edite um que já foi
+aplicado) e aplique pelo SQL Editor do Supabase ou pelo Claude.
+
 ## Depois das telas
 
 - [ ] Login com Supabase Auth (e-mail) e botão "carregar obras de exemplo" para contas novas.
 - [ ] Criar e editar obras, etapas, itens e equipes (hoje o repositório só grava lançamentos e etapas).
-- [ ] Impedir no banco que uma etapa aponte para serviço ou equipe de outro usuário
-      (hoje o RLS protege leitura e escrita, mas a chave estrangeira não confere o dono).
 - [ ] Importar a planilha .xlsx original.
 - [ ] Publicar na Vercel e colocar o link e um print no README.

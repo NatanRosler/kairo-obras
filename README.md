@@ -35,7 +35,7 @@ Because crews belong to the company and move between jobs, it also checks every 
 | Budget vs. actual using Earned Value (not "spent vs. total budget") | ✅ engine + tests |
 | Crew conflicts across jobs | ✅ engine + tests |
 | Productivity that learns from measurements on past jobs | ✅ domain + tests |
-| Postgres schema with row-level security, idempotent demo data | ✅ tested on Postgres 16 |
+| Postgres schema with row-level security and owner-scoped foreign keys, idempotent demo data | ✅ live on Supabase |
 | Screens: overview, budget, schedule simulator, costs, BDI, price base, crews, all jobs | 🚧 in progress |
 | Login with Supabase Auth | 🔜 |
 

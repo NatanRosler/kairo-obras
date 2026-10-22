@@ -179,4 +179,6 @@ insert into public.modelos_bdi (id, nome, indiretos, sobre_preco) values
 on conflict do nothing;
 $$;
 
+-- Só usuários logados: sem login, auth.uid() é nulo e não há dono para os dados.
+revoke execute on function public.carregar_dados_exemplo() from public, anon;
 grant execute on function public.carregar_dados_exemplo() to authenticated;

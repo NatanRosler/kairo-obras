@@ -56,6 +56,8 @@ set search_path = public
 as $$
 ${partes.join('\n')}$$;
 
+-- Só usuários logados: sem login, auth.uid() é nulo e não há dono para os dados.
+revoke execute on function public.carregar_dados_exemplo() from public, anon;
 grant execute on function public.carregar_dados_exemplo() to authenticated;
 `
 
