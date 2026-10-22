@@ -1,0 +1,47 @@
+@import 'tailwindcss';
+
+/*
+ * Cores e fontes do protótipo aprovado. Use as classes geradas, por exemplo:
+ *   bg-chao, bg-cartao, text-tinta, text-apagado, border-borda,
+ *   bg-laranja, text-laranja, bg-azul, font-mono, font-marca.
+ */
+@theme {
+  --font-sans: 'IBM Plex Sans', system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+  --font-marca: 'Montserrat', sans-serif;
+
+  --color-chao: #f4f3ef;          /* fundo da página */
+  --color-cartao: #ffffff;        /* cartões e tabelas */
+  --color-tinta: #16191d;         /* texto principal */
+  --color-apagado: #5b6168;       /* texto secundário (passa 4.5:1 no branco) */
+  --color-borda: #dedcd5;
+  --color-linha: #eceae4;         /* divisórias de tabela */
+
+  --color-menu: #16191d;          /* menu lateral */
+  --color-menu-ativo: #2a2f36;
+  --color-menu-texto: #d4d2cc;
+  --color-menu-borda: #3a4048;
+
+  --color-laranja: #c2410c;       /* ação principal, caminho crítico, alertas */
+  --color-laranja-claro: #fff4ec;
+  --color-laranja-borda: #f5c8ae;
+  --color-laranja-marca: #fb923c; /* laranja do logo em fundo escuro */
+  --color-azul: #1d4ed8;          /* gasto real, obra A */
+  --color-azul-claro: #dbe4fb;
+  --color-verde-obra: #0f766e;    /* obra B */
+  --color-ardosia: #475569;       /* etapas com folga */
+  --color-concluido: #cbd0d6;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--color-chao);
+  color: var(--color-tinta);
+  font-family: var(--font-sans);
+}
